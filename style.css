@@ -1,0 +1,20 @@
+.modal-backdrop {
+   background-color: hsla(0, 100%, 100%, 0);
+}
+.form-control{
+text-align: center;
+}
+.modal-content{
+padding-top:19px;
+background-color:hsla(0, 100%, 100%, 0.8);
+opacity: 0.8;
+}
+.modal-content-fade{
+padding-top:0px;
+background-color:hsla(0, 100%, 100%, 0.9);
+opacity: 1;
+}
+body{
+background-size: cover;
+background-position: center;
+}

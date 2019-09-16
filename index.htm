@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>高大資工麥塊個人化系統</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script>
+function validate_required(form)
+{
+  if (form.ID.value==null||form.ID.value=="")
+    {$('#window').modal('toggle');return false}
+  else {return true}
+}
+</script>
+</head>
+<body background="img/index.png" onload="$('#main').modal({backdrop: 'static', keyboard: false},'show');">
+<div class="modal" id="main" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-body" style="text-align:center;">
+				<form action="upload.php" method="post" enctype="multipart/form-data" onsubmit="return validate_required(this)">
+					<center>
+						<h3>
+							<i class="fas fa-cloud-upload-alt"></i> 高大資工麥塊個人化系統</h3>
+					</center>
+					</p>
+					<HR>
+					<input type="text" class="form-control" name="ID" placeholder="角色ID">
+					</p>
+					<HR>
+					<label class="btn btn-primary btn-lg btn-block">
+						<input type="file" style="display:none;" name="skin" id="skin" />
+						<i class="fas fa-angle-right"></i> 選擇皮膚</label>
+					</p>
+					<HR>
+					<label class="btn btn-primary btn-lg btn-block">
+						<input type="file" style="display:none;" name="cape" id="cape" />
+						<i class="fas fa-angle-right"></i> 選擇披風</label>
+					</p>
+					<HR>
+					<label class="btn btn-primary btn-lg btn-block">
+						<input type="file" style="display:none;" name="elytra" id="elytra" />
+						<i class="fas fa-angle-right"></i> 選擇鞘翅</label>
+					</p>
+					<HR>
+					<label class="btn btn-success btn-lg btn-block">
+						<input type="submit" style="display:none;" name="submit" />
+						<i class="fa fa-paper-plane"></i> 上傳檔案</label>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="window" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-sm">
+		<div class="modal-content modal-content-fade">
+		<div class="modal-body" style="text-align:center;">
+				</p>未填寫角色ID！</br></br>
+				<button type="button" class="btn btn-danger btn-lg" data-dismiss="modal"><i class="fas fa-times"></i>
+				</button></p>
+			</div>			
+		</div>
+	</div>
+</div>
+</body>
+</html>
